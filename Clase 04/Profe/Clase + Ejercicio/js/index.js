@@ -151,3 +151,16 @@
 // console.log(resultado);
 
 
+var examResults = [7, 5, 6, 4, 3, 2, 8]
+
+function sumaTotal(array) {
+  var total = 0;
+  for (var i = 0; i < array.length; i++) {
+    total += array[i]
+  }
+  return total
+}
+
+function promedio(array) {
+  return sumaTotal(array) / array.length;
+}
