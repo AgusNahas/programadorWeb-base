@@ -13,12 +13,15 @@ squareNodes.click(squareClick)
  * corresponda y alterna el turno para cambiar de jugador
  * @param { HTMLEvent } event
  */
-function squareClick (event) {
-  var squareNode = $(this)
+function squareClick(event) {
+  var squareNode = $(event.target)
+
+  console.log('Jugador: ' + player)
 
   if (!(squareNode.hasClass('circle') || squareNode.hasClass('cross'))) {
     if (player) {
       squareNode.addClass('circle')
+      // squareNode.classList.add('circle')
     } else {
       squareNode.addClass('cross')
     }
